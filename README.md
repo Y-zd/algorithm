@@ -1,6 +1,6 @@
 算法数据结构学习
 ==
-链表 com.yzd.algorithm.linked
+[链表](/src/main/java/com/yzd/algorithm/linked)
 --
     
  * [单链表反转](/src/main/java/com/yzd/algorithm/linked/DeleteNodeN.java)
