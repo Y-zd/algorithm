@@ -82,34 +82,17 @@ public class ReverseLinked {
 
     }
 
-    public static void print(Node head) {
-        while (head.next != null) {
-            System.out.println(head.item);
-            head = head.next;
-        }
-        System.out.println(head.item);
-    }
-
 
     public static void main(String[] args) {
-        Node<Integer> head = getLinked();
         System.out.println("反转前:");
-        print(head);
+        GenerateLinkedUtil.print(GenerateLinkedUtil.getLinked(5));
         System.out.println("迭代法反转后:");
-        print(reverse(getLinked()));
+        GenerateLinkedUtil.print(reverse(GenerateLinkedUtil.getLinked(5)));
         System.out.println("递归法1反转后:");
-        print(recursionReverse1(getLinked(), null));
+        GenerateLinkedUtil.print(recursionReverse1(GenerateLinkedUtil.getLinked(5), null));
         System.out.println("递归法2反转后:");
-        print(recursionReverse2(getLinked()));
+        GenerateLinkedUtil.print(recursionReverse2(GenerateLinkedUtil.getLinked(5)));
     }
 
-    public static Node<Integer> getLinked() {
-        Node<Integer> head = new Node(1);
-        head.next = new Node<>(2);
-        head.next.next = new Node<>(3);
-        head.next.next.next = new Node<>(4);
-        head.next.next.next.next = new Node<>(5);
-        return head;
-    }
 
 }
