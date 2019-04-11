@@ -13,5 +13,5 @@
    
  * 求链表的中间结点  MiddleNode
      
-   [我的博客](/algorithm/linked/DeleteNodeN.java)
+   [我的博客](/algorithm/blob/master/src/main/java/com/yzd/algorithm/linked/DeleteNodeN.java)
     
