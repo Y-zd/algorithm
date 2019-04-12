@@ -1,29 +1,66 @@
 算法数据结构学习
 ==
-
-[链表](/src/main/java/com/yzd/algorithm/linked)
-
- * [单链表反转](/src/main/java/com/yzd/algorithm/linked/DeleteNodeN.java)
-
- * [链表中环的检测](/src/main/java/com/yzd/algorithm/linked/DetectionOfRing.java) 
-   
- * [两个有序的链表合并](/src/main/java/com/yzd/algorithm/linked/MergeTwoOrderedLinked.java)  
-    
- * [删除链表倒数第n个结点](/src/main/java/com/yzd/algorithm/linked/DeleteNodeN.java) 
-   
- * [求链表的中间结点](/src/main/java/com/yzd/algorithm/linked/MiddleNode.java)  
-
+(对应LeetCode编号)
 ---
-       
+
 [链表](/src/main/java/com/yzd/algorithm/linked)
 
- * [单链表反转](/src/main/java/com/yzd/algorithm/linked/DeleteNodeN.java)
-
- * [链表中环的检测](/src/main/java/com/yzd/algorithm/linked/DetectionOfRing.java) 
+ * [单链表反转(206)](/src/main/java/com/yzd/algorithm/linked/DeleteNodeN.java)
+ 
+ * [链表中环的检测(141)](/src/main/java/com/yzd/algorithm/linked/DetectionOfRing.java) 
    
- * [两个有序的链表合并](/src/main/java/com/yzd/algorithm/linked/MergeTwoOrderedLinked.java)  
+ * [两个有序的链表合并(21)](/src/main/java/com/yzd/algorithm/linked/MergeTwoOrderedLinked.java)  
     
- * [删除链表倒数第n个结点](/src/main/java/com/yzd/algorithm/linked/DeleteNodeN.java) 
+ * [删除链表倒数第n个结点(19)](/src/main/java/com/yzd/algorithm/linked/DeleteNodeN.java) 
    
- * [求链表的中间结点](/src/main/java/com/yzd/algorithm/linked/MiddleNode.java)  
-         
+ * [求链表的中间结点(876)](/src/main/java/com/yzd/algorithm/linked/MiddleNode.java)  
+
+
+[栈](/src/main/java/com/yzd/algorithm/stack)
+
+ * 有效的括号(20)
+
+  给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
+有效字符串需满足：
+左括号必须用相同类型的右括号闭合。
+左括号必须以正确的顺序闭合。
+注意空字符串可被认为是有效字符串。
+
+ * 最小栈(155)
+
+设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
+push(x) -- 将元素 x 推入栈中。
+pop() -- 删除栈顶的元素。
+top() -- 获取栈顶元素。
+getMin() -- 检索栈中的最小元素。
+
+ * 用栈实现队列(232)
+ 
+ 使用栈实现队列的下列操作：
+ push(x) -- 将一个元素放入队列的尾部。
+ pop() -- 从队列首部移除元素。
+ peek() -- 返回队列首部的元素。
+ empty() -- 返回队列是否为空。
+
+* 比较含退格的字符串(844)
+给定 S 和 T 两个字符串，当它们分别被输入到空白的文本编辑器后，判断二者是否相等，并返回结果。 # 代表退格字符。
+
+* 基本计算器(224)
+实现一个基本的计算器来计算一个简单的字符串表达式的值。
+字符串表达式可以包含左括号 ( ，右括号 )，加号 + ，减号 -，非负整数和空格  。
+
+* 棒球比赛(682)
+
+你现在是棒球比赛记录员。
+给定一个字符串列表，每个字符串可以是以下四种类型之一：
+1.整数（一轮的得分）：直接表示您在本轮中获得的积分数。
+2. "+"（一轮的得分）：表示本轮获得的得分是前两轮有效 回合得分的总和。
+3. "D"（一轮的得分）：表示本轮获得的得分是前一轮有效 回合得分的两倍。
+4. "C"（一个操作，这不是一个回合的分数）：表示您获得的最后一个有效 回合的分数是无效的，应该被移除。
+每一轮的操作都是永久性的，可能会对前一轮和后一轮产生影响。
+你需要返回你在所有回合中得分的总和。
+
+* 下一个更大元素 I 496 
+
+给定两个没有重复元素的数组 nums1 和 nums2 ，其中nums1 是 nums2 的子集。找到 nums1 中每个元素在 nums2 中的下一个比其大的值。
+nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的右边的第一个比 x 大的元素。如果不存在，对应位置输出-1。
