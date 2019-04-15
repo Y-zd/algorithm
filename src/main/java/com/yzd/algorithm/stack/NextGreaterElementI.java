@@ -10,4 +10,6 @@ package com.yzd.algorithm.stack;
  *       nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的右边的第一个比 x 大的元素。如果不存在，对应位置输出-1。
  */
 public class NextGreaterElementI {
+
+
 }
