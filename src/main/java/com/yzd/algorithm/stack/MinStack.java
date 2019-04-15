@@ -15,8 +15,8 @@ import java.util.Random;
  *      pop() -- 删除栈顶的元素。
  *      top() -- 获取栈顶元素。
  *      getMin() -- 检索栈中的最小元素。
- *
- * 使用链栈，实现基本的入栈出栈，遍历栈中元素，同时比较其值，取其中最小，最后返回最小值。
+ * 思路：
+ *      使用链栈，实现基本的入栈出栈，遍历栈中元素，同时比较其值，取其中最小，最后返回最小值。
  */
 public class MinStack {
 
@@ -73,7 +73,7 @@ public class MinStack {
 
 }
 
-class Test {
+class MinStackTest {
     public static void main(String[] args) throws Exception {
 
         Random random = new Random();
