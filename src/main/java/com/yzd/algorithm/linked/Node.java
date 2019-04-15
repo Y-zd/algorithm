@@ -10,10 +10,10 @@ package com.yzd.algorithm.linked;
  */
 public class Node<E> {
 
-    E item;
-    com.yzd.algorithm.linked.Node<E> next;
+    public E item;
+    public Node<E> next;
 
-    Node(E element, com.yzd.algorithm.linked.Node<E> next) {
+    Node(E element, Node<E> next) {
         this.item = element;
         this.next = next;
     }
