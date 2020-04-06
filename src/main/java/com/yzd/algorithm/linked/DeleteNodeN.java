@@ -1,7 +1,5 @@
 package com.yzd.algorithm.linked;
 
-import java.util.List;
-
 /***
  * @ClassName: DeleteNodeN
  * @Auther: yanzhidong

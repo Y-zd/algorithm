@@ -11,6 +11,17 @@ package com.yzd.algorithm.linked;
  */
 public class ReverseLinked {
 
+    public static void main(String[] args) {
+        System.out.println("反转前:");
+        GenerateLinkedUtil.print(GenerateLinkedUtil.getLinked(5));
+        System.out.println("迭代法反转后:");
+        GenerateLinkedUtil.print(reverse(GenerateLinkedUtil.getLinked(5)));
+        System.out.println("递归法1反转后:");
+        GenerateLinkedUtil.print(recursionReverse1(GenerateLinkedUtil.getLinked(5), null));
+        System.out.println("递归法2反转后:");
+        GenerateLinkedUtil.print(recursionReverse2(GenerateLinkedUtil.getLinked(5)));
+    }
+
 
     /**
      * 1.迭代法：
@@ -80,18 +91,6 @@ public class ReverseLinked {
         next.next = node;
         return re;
 
-    }
-
-
-    public static void main(String[] args) {
-        System.out.println("反转前:");
-        GenerateLinkedUtil.print(GenerateLinkedUtil.getLinked(5));
-        System.out.println("迭代法反转后:");
-        GenerateLinkedUtil.print(reverse(GenerateLinkedUtil.getLinked(5)));
-        System.out.println("递归法1反转后:");
-        GenerateLinkedUtil.print(recursionReverse1(GenerateLinkedUtil.getLinked(5), null));
-        System.out.println("递归法2反转后:");
-        GenerateLinkedUtil.print(recursionReverse2(GenerateLinkedUtil.getLinked(5)));
     }
 
 

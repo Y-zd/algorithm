@@ -16,6 +16,11 @@ import java.util.*;
  *
  */
 public class ValidParentheses {
+    public static void main(String[] args) {
+
+        System.out.println(valid("[2((1)){}]"));
+    }
+
 
     public static boolean valid(String string) {
         Map<Character, Character> keyMap = new HashMap();
@@ -51,10 +56,7 @@ public class ValidParentheses {
         }
     }
 
-    public static void main(String[] args) {
 
-        System.out.println(valid("[2((1)){}]"));
-    }
 
 
 }

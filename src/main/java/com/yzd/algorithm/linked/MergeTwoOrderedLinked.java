@@ -11,6 +11,17 @@ package com.yzd.algorithm.linked;
 public class MergeTwoOrderedLinked {
 
 
+    public static void main(String[] args) {
+        System.out.println("有序链表1:");
+        Node<Integer> randomLinked1 = GenerateLinkedUtil.getRandomLinked(5);
+        GenerateLinkedUtil.print(randomLinked1);
+        System.out.println("有序链表2:");
+        Node<Integer> randomLinked2 = GenerateLinkedUtil.getRandomLinked(5);
+        GenerateLinkedUtil.print(randomLinked2);
+        System.out.println("合并后:");
+        GenerateLinkedUtil.print(merge(randomLinked1, randomLinked2));
+    }
+
     /**
      * 1 3 5 7 9
      * 2 4 6 8 10
@@ -50,14 +61,5 @@ public class MergeTwoOrderedLinked {
         return newLinked;
     }
 
-    public static void main(String[] args) {
-        System.out.println("有序链表1:");
-        Node<Integer> randomLinked1 = GenerateLinkedUtil.getRandomLinked(5);
-        GenerateLinkedUtil.print(randomLinked1);
-        System.out.println("有序链表2:");
-        Node<Integer> randomLinked2 = GenerateLinkedUtil.getRandomLinked(5);
-        GenerateLinkedUtil.print(randomLinked2);
-        System.out.println("合并后:");
-        GenerateLinkedUtil.print(merge(randomLinked1, randomLinked2));
-    }
+
 }

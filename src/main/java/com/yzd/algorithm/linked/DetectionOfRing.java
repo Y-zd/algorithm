@@ -14,6 +14,12 @@ import java.util.HashSet;
 public class DetectionOfRing {
 
 
+    public static void main(String[] args) {
+        Node<Integer> linked = GenerateLinkedUtil.getRingLinked();
+        System.out.println("方法1:" + detect1(linked));
+        System.out.println("方法2:" + detect2(linked));
+    }
+
     /**
      * 方法1：
      * 足迹法
@@ -60,11 +66,5 @@ public class DetectionOfRing {
         return false;
     }
 
-
-    public static void main(String[] args) {
-        Node<Integer> linked = GenerateLinkedUtil.getRingLinked();
-        System.out.println("方法1:" + detect1(linked));
-        System.out.println("方法2:" + detect2(linked));
-    }
 
 }

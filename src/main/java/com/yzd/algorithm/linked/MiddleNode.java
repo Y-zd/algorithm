@@ -11,6 +11,12 @@ package com.yzd.algorithm.linked;
  */
 public class MiddleNode {
 
+    public static void main(String[] args) {
+        System.out.println("原链表:");
+        Node<Integer> linked = GenerateLinkedUtil.getLinked(8);
+        GenerateLinkedUtil.print(linked);
+        System.out.println("中间节点:" + getMiddle(linked).item);
+    }
 
     /**
      * 快慢指针
@@ -31,7 +37,7 @@ public class MiddleNode {
             count++;
             slow = slow.next;
             fast = fast.next.next;
-            if (fast==null){
+            if (fast == null) {
                 System.out.println("链表长度为奇数");
             }
 
@@ -40,12 +46,5 @@ public class MiddleNode {
         return slow;
     }
 
-
-    public static void main(String[] args) {
-        System.out.println("原链表:");
-        Node<Integer> linked = GenerateLinkedUtil.getLinked(8);
-        GenerateLinkedUtil.print(linked);
-        System.out.println("中间节点:" + getMiddle(linked).item);
-    }
 
 }
