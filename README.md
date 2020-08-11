@@ -36,6 +36,17 @@
 
 [排序](/src/main/java/com/yzd/algorithm/sort)
 
+|            | 时间复杂度 | 是否稳定排序 | 是否原地排序 |
+| :--------- | ---------- | :----------- | :----------- |
+| 冒泡怕排序 | O(n^2) | 是 | 是 |
+| 插入排序   | O(n^2) | 是 | 是 |
+| 选择排序   | O(n^2) | 否 | 是 |
+| 快速排序   | O(n*logn) | 否 | 是 |
+| 归并排序   | O(n*logn) | 是 | 否 |
+| 计数排序   | O(n+k) k是数据范围 | 是 | 否 |
+| 桶排序     | O(n) | 是 | 否 |
+| 基数排序   | O(dn) d是维度 | 是 | 否 |
+
  * [冒泡排序](/src/main/java/com/yzd/algorithm/sort/BubbleSort.java)
 
  * [插入排序](/src/main/java/com/yzd/algorithm/sort/InsertionSort.java)
@@ -65,4 +76,5 @@
  * [快速排序](/src/main/java/com/yzd/algorithm/sort/QuickSort.java)
    - 快排是一种原地、不稳定的排序算法，间复杂度也是 O(nlogn)
 
+ * [计数排序](/src/main/java/com/yzd/algorithm/sort/CountingSort.java)
 

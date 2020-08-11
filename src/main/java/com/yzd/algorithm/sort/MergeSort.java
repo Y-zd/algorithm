@@ -1,7 +1,5 @@
 package com.yzd.algorithm.sort;
 
-import java.util.Arrays;
-
 /***
  *
  * 归并排序算法步骤
@@ -21,12 +19,11 @@ public class MergeSort {
 
 
     public static void main(String[] args) {
-        int[] arr = {38, 46, 15, 6, 90, 99, 11, 5, 3, 100};
-        //新建一个临时数组存放
+        int[] arr = ArrayUtil.generate(10);
+        ArrayUtil.print(arr);
         int[] tmp = new int[arr.length];
         mergeSort(arr, 0, arr.length - 1, tmp);
-        Arrays.stream(arr).forEach(System.out::println);
-
+        ArrayUtil.print(arr);
     }
 
     public static void mergeSort(int[] arr, int low, int high, int[] tmp) {
@@ -56,11 +53,9 @@ public class MergeSort {
         while (j <= mid) {
             tmp[i++] = arr[j++];
         }
-
         while (k <= high) {
             tmp[i++] = arr[k++];
         }
-
         for (int t = 0; t < i; t++) {
             arr[low + t] = tmp[t];
         }

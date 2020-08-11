@@ -1,7 +1,5 @@
 package com.yzd.algorithm.sort;
 
-import java.util.Arrays;
-
 /***
  *  快速排序
  * 1．先从数列中取出一个数作为基准数。
@@ -16,9 +14,10 @@ public class QuickSort {
 
 
     public static void main(String[] args) {
-        int[] arr = {38, 46, 15, 6, 90, 99, 11, 5, 3, 100};
+        int[] arr = ArrayUtil.generate(10);
+        ArrayUtil.print(arr);
         quickSort(arr, 0, arr.length - 1);
-        Arrays.stream(arr).forEach(System.out::println);
+        ArrayUtil.print(arr);
     }
 
     private static void quickSort(int[] arr, int left, int right) {

@@ -1,5 +1,6 @@
 package com.yzd.algorithm.sort;
 
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -17,7 +18,7 @@ public class ArrayUtil {
         Random random = new Random();
         int[] array = new int[length];
         for (int i = 0; i < length; i++) {
-            array[i] = random.nextInt(100);
+            array[i] = random.nextInt(10);
         }
         return array;
     }
