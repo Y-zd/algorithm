@@ -78,5 +78,66 @@
 
  * [计数排序](/src/main/java/com/yzd/algorithm/sort/CountingSort.java)
 
- * [计数排序](/src/main/java/com/yzd/algorithm/find/Bsearch.java)
+ * [二分查找](/src/main/java/com/yzd/algorithm/find/Bsearch.java)
    - 时间复杂度O(logn)
+   
+  散列表
+  散列表的装载因子=填入表中的元素个数/散列表的长度
+ 
+ [二叉树](/src/main/java/com/yzd/algorithm/tree)
+ * 二叉树既可以用链式存储，也可以用数组顺序存储。
+ 数组顺序存储的方式比较适合完全二叉树，其他类型的二叉树用数组存储会比较浪费存储空间。
+ 除此之外，二叉树里非常重要的操作就是前、中、后序遍历操作，遍历的时间复杂度是 O(n)
+ * 二叉树的遍历
+   1. 前序遍历是指，对于树中的任意节点来说，先打印这个节点，然后再打印它的左子树，最后打印它的右子树。
+   2. 中序遍历是指，对于树中的任意节点来说，先打印它的左子树，然后再打印它本身，最后打印它的右子树。
+   3. 后序遍历是指，对于树中的任意节点来说，先打印它的左子树，然后再打印它的右子树，最后打印这个节点本身。
+ 
+ * 实际上，二叉树的前、中、后序遍历就是一个递归的过程
+   ` 写递归代码的关键，就是看能不能写出递推公式，而写递推公式的关键就是，如果要解决问题 A，
+      就假设子问题 B、C 已经解决，然后再来看如何利用 B、C 来解决 A。
+      所以，我们可以把前、中、后序遍历的递推公式都写出来。`
+   ```
+    前序遍历的递推公式：preOrder(r) = print r->preOrder(r->left)->preOrder(r->right)
+    中序遍历的递推公式：inOrder(r) = inOrder(r->left)->print r->inOrder(r->right)
+    后序遍历的递推公式：postOrder(r) = postOrder(r->left)->postOrder(r->right)->print r
+    ```
+    ```
+    void preOrder(Node* root) {
+      if (root == null) return;
+      print root // 此处为伪代码，表示打印root节点
+      preOrder(root->left);
+      preOrder(root->right);
+    }
+    
+    void inOrder(Node* root) {
+      if (root == null) return;
+      inOrder(root->left);
+      print root // 此处为伪代码，表示打印root节点
+      inOrder(root->right);
+    }
+    
+    void postOrder(Node* root) {
+      if (root == null) return;
+      postOrder(root->left);
+      postOrder(root->right);
+      print root // 此处为伪代码，表示打印root节点
+    }
+    ``` 
+    
+   
+ 散列表：插入删除查找都是O(1), 是最常用的，但其缺点是不能顺序遍历以及扩容缩容的性能损耗。适用于那些不需要顺序遍历，数据更新不那么频繁的。
+ 
+ 跳表：插入删除查找都是O(logn), 并且能顺序遍历。缺点是空间复杂度O(n)。适用于不那么在意内存空间的，其顺序遍历和区间查找非常方便。
+ 
+ 红黑树：插入删除查找都是O(logn), 中序遍历即是顺序遍历，稳定。缺点是难以实现，去查找不方便。其实跳表更佳，但红黑树已经用于很多地方了。
+ 2018-12-02
+ 
+ 堆排序是一种原地的、时间复杂度为 O(nlogn) 的排序算法
+ 
+ 原地排序（Sorted in place）。原地排序算法，就是特指空间复杂度是 O(1) 的排序算法
+ 
+ 稳定性。这个概念是说，如果待排序的序列中存在值相等的元素，经过排序之后，相等元素之间原有的先后顺序不变。
+ 
+ 
+   
